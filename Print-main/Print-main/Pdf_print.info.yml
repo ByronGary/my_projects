@@ -1,0 +1,10 @@
+name: Pdf Print
+description: Allows any Drupal Entity to be printed to a location
+type: module
+core_version_requirement: ^8.8 || ^9
+package: Custom
+dependencies:
+  - entity_print
+  - drupal:file
+  - drupal:media
+  - drupal:node

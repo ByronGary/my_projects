@@ -1,0 +1,9 @@
+name: Views Download all files
+type: module
+description: This module will provide download function for downloading all files associated with the views results.
+core_version_requirement: ^8 || ^9
+package: Files
+version: '1.0'
+project: 'views_file_download'
+dependencies:
+  - views_bulk_operations

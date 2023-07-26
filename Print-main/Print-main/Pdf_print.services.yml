@@ -1,0 +1,10 @@
+services:
+  fsa_auto_print.pdf_builder:
+    class: Drupal\Pdf_print\PdfBuilder
+    arguments: [ '@plugin.manager.entity_print.print_engine', '@entity_print.print_builder', '@file_system', '@entity_type.manager', '@current_user', '@messenger', '@logger.factory', '@tempstore.shared', '@tempstore.private' ]
+
+  fsa_auto_print.theme_negotiator:
+    class: Drupal\Pdf_print\Theme\ThemeNegotiator
+    arguments: [ '@config.factory' ]
+    tags:
+      - { name: theme_negotiator, priority: -40 }
