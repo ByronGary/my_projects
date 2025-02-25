@@ -1,0 +1,29 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_schema().
+ */
+function fo_feeds_schema() {
+  $schema['fo_feeds'] = array(
+    'description' => 'The table for storing the students data.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for student',
+        'type' => 'serial',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+      ),
+      'fo_feeds_parameter' => array(
+        'description' => 'Post Parameter',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      )
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}

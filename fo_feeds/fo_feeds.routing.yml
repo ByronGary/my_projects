@@ -1,0 +1,15 @@
+cchi_fo.multiple_delete_confirm:
+  path: '/admin/content/feed/delete-all'
+  defaults:
+    _form: 'Drupal\fo_feeds\Form\DeleteListForm'
+  requirements:
+     _permission: 'access feed overview'
+     _access: 'TRUE'
+cchi_fo.parameter_store:
+  path: '/admin/content/feed/import-funded-project'
+  defaults:
+    _title: 'Import Funded Projects'
+    _form: '\Drupal\fo_feeds\Form\ParameterForm'
+  requirements:
+    _permission: 'access feed overview'
+    _access: 'TRUE'

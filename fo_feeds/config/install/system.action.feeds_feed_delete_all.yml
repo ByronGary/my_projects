@@ -1,0 +1,10 @@
+id: feeds_feed_delete_all
+label: 'Delete imported items and feed'
+status: true
+langcode: en
+type: feeds_feed
+plugin: feeds_feed_delete_all
+dependencies:
+  module:
+    - feeds
+    - fo_feeds

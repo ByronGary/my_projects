@@ -1,0 +1,20 @@
+<?php
+
+
+
+//This form alter deletes the Feed after the Feed items are cleared
+function fo_feeds_form_alter(&$form, &$form_state, $feed) {
+  if ($form['#form_id'] == 'feeds_feed_delete_all') {
+
+    $form['#submit'][]  = 'fo_feeds_submit_handler';
+  }
+}
+
+function fo_feeds_submit_handler(&$form, $form_state) {
+  $fids = array_keys($form['feeds']['#items']);
+  $main_feed = \Drupal::entityTypeManager()->getStorage('feeds_feed')->loadMultiple($fids);
+
+  foreach ($main_feed as $fid) {
+    $fid->delete();
+  }
+}

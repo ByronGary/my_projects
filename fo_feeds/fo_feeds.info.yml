@@ -1,0 +1,10 @@
+name: CCHI FO Feeds
+type: module
+description: CCHI Funding Opportunities Import
+package: CCHI
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - drupal:feeds
+  - drupal:feeds_ex
+  - drupal:feeds_tamper
+  - drupal:feeds_fetcher_post
