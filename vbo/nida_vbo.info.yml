@@ -1,0 +1,5 @@
+type: module
+name: "NIDA VBO"
+description: "Custom module for Views bulk Operations"
+package: "Views"
+core_version_requirement: ^9 || ^10
