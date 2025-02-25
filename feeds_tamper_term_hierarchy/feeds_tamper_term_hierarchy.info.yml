@@ -1,0 +1,13 @@
+name: Feeds Tamper Term Hierarchy
+type: module
+description: Feeds Tamper plugin to import taxonomy terms with hierarchy support.
+core_version_requirement: ^8 || ^9 || ^10
+package: Feeds
+dependencies:
+  - feeds:feeds
+  - tamper:tamper
+
+# Information added by Drupal.org packaging script on 2022-01-31
+version: '1.0.x-dev'
+project: 'feeds_tamper_term_hierarchy'
+datestamp: 1643656062
